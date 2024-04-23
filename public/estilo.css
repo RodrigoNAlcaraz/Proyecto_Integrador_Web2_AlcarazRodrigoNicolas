@@ -1,0 +1,270 @@
+body {
+    background: linear-gradient(to bottom, #f3f3f3 0%, #b6b6b6 100%);
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+    margin-left: 5%;
+    padding: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    border: 1px solid beige;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: rgb(174, 214, 241);
+    position: relative;
+}
+
+.card img {
+    width: 100%;
+    height: 300px;
+    border-bottom: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.card-content {
+    padding: 10px;
+}
+
+.card h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin: 0;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    font-size: 14px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #a8d8ea 0%, #5d576b 100%);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+.description:hover:after {
+    content: attr(desc);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 200px;
+    font-size: 14px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    background-color: #f8f9fa; /* Cambia el color de fondo a un gris más claro para un aspecto más moderno */
+    padding: 10px;
+    color: #333;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); /* Agrega una sombra de caja para darle profundidad */
+    transition: all 0.3s ease-in-out; /* Agrega una transición suave para los cambios de estilo */
+}
+
+
+input {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 24px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    border-radius: 25px;
+
+}
+
+
+button:hover {
+    background-color: #0e7ee7 !important;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 20px;
+    background: linear-gradient(to right, #36d1dc, #5b86e5);
+    border-radius: 35px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+
+
+.navegable {
+    margin: 10px 20px 10px 10px;
+    transition: all 0.3s ease-in-out; /* Agrega una transición suave al pasar el ratón por encima */
+}
+
+.imagCarrito {
+    height: 50px;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out; /* Agrega una transición suave al cambiar el tamaño de la imagen */
+}
+
+.navegable:hover {
+    background-color: #0e7ee7;
+    border-radius: 15px; /* Aumenta el radio del borde para un efecto más suave */
+    transform: scale(1.25);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); /* Agrega una sombra de caja al pasar el ratón por encima para un efecto de elevación */
+}
+
+
+h1 {
+    background-color: #6c5ce7;
+    color: #ffffff;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 45px;
+    padding: 10px;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 25px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    transition: all 0.3s ease;
+}
+
+
+.precioFinal {
+    color: rgb(7, 192, 7);
+    font-size: 18px;
+}
+
+.card .offer-band {
+    position: absolute;
+    top: -30%;
+    left: 30%;
+    width: calc(50% - 50px);
+    height: calc(100% + 300px);
+    background: #29e49cb2;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-40deg);
+    font-size: 19px;
+    font-weight: bold;
+    visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); 
+    transition: all 0.3s ease-in-out; 
+}
+
+.card[data-descuento='true'] .offer-band {
+    visibility: visible;
+}
+
+.imgCarrito {
+    height: 100px;
+    width: 100px;
+    text-align: center !important;
+    align-items: center !important;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+table,
+th,
+td {
+    border: 1px solid #ddd;
+}
+
+th,
+td {
+    padding: 15px;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    font-size: 22px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #bcc7c2;
+}
+
+
+#carrito td:nth-child(1),
+#carrito td:nth-child(3),
+#carrito td:nth-child(4),
+#carrito td:nth-child(5),
+#carrito td:nth-child(6) {
+    text-align: center;
+}
+
+.botonComprar {
+    margin-left: auto;
+    display: block;
+    margin-right: 5%;
+    font-size: 20px;
+    padding: 20px;
+}
+
+
+
+#notification {
+    position: fixed;
+    bottom: 80%;
+    right: 5%;
+    font-size: 22px;
+    padding: 20px;
+    background: linear-gradient(to right, #ff9966, #ff5e62);
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    position: absolute;
+    width: 100%;
+}
+
+footer p {
+    margin: 0; 
+}
+
