@@ -7,6 +7,45 @@ body {
     line-height: 1.6;
 }
 
+h1 {
+    background-color: #6c5ce7;
+    color: #ffffff;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 45px;
+    padding: 10px;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 25px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.botonYPrecio {
+    display: flex;
+    justify-content: flex-end;;
+    align-items: center;
+    padding: 0 5%;
+}
+
+.precioFinalCompra {
+    border-radius: 0px 25px 0px 25px; 
+    background: linear-gradient(to right, #9b87d1, #6c5ce7);
+    color: white;
+    font-size: 20px;
+    padding: 15px;
+    margin-right: 3%;
+    text-align: center; 
+    line-height: 1.5; 
+    font-weight: bold; 
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1); 
+}
+
+.precioFinalCompra:hover {
+    transform: scale(1.1); 
+    background: linear-gradient(to right,  #6c5ce7, #9b87d1);
+    border-radius: 25px 0px 25px 0px; 
+    transition: all 0.5s ease;
+}
 
 .container {
     max-width: 1600px;
@@ -54,7 +93,7 @@ body {
     transform: scale(1.05);
     font-size: 14px;
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
     background: linear-gradient(135deg, #a8d8ea 0%, #5d576b 100%);
     border: 1px solid rgba(0, 0, 0, 0.1);
     color: white;
@@ -67,16 +106,16 @@ body {
     top: 50%;
     transform: translate(-50%, -50%);
     min-width: 200px;
+    width: 80%;
     font-size: 14px;
     border: 1px solid #000000;
     border-radius: 10px;
-    background-color: #f8f9fa; /* Cambia el color de fondo a un gris más claro para un aspecto más moderno */
-    padding: 10px;
+    background-color: #f8f9fa; 
+    padding: 9px;
     color: #333;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); /* Agrega una sombra de caja para darle profundidad */
-    transition: all 0.3s ease-in-out; /* Agrega una transición suave para los cambios de estilo */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); 
+    transition: all 0.5s ease-in-out; 
 }
-
 
 input {
     margin-top: 10px;
@@ -98,15 +137,14 @@ button {
     font-size: 16px;
     transition-duration: 0.4s;
     border-radius: 25px;
-
 }
-
 
 button:hover {
-    background-color: #0e7ee7 !important;
+    background-color: #0e7ee7 ;
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease-in-out; 
+    transform: scale(1.05);
 }
-
 
 nav {
     display: flex;
@@ -118,41 +156,23 @@ nav {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
-
-
 .navegable {
     margin: 10px 20px 10px 10px;
-    transition: all 0.3s ease-in-out; /* Agrega una transición suave al pasar el ratón por encima */
+    transition: all 0.3s ease-in-out; 
 }
 
 .imagCarrito {
     height: 50px;
     border-radius: 50%;
-    transition: all 0.3s ease-in-out; /* Agrega una transición suave al cambiar el tamaño de la imagen */
+    transition: all 0.3s ease-in-out; 
 }
 
 .navegable:hover {
     background-color: #0e7ee7;
-    border-radius: 15px; /* Aumenta el radio del borde para un efecto más suave */
+    border-radius: 15px; 
     transform: scale(1.25);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); /* Agrega una sombra de caja al pasar el ratón por encima para un efecto de elevación */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); 
 }
-
-
-h1 {
-    background-color: #6c5ce7;
-    color: #ffffff;
-    text-align: center;
-    font-family: "Montserrat", sans-serif;
-    font-size: 45px;
-    padding: 10px;
-    margin: auto;
-    margin-top: 30px;
-    border-radius: 25px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-    transition: all 0.3s ease;
-}
-
 
 .precioFinal {
     color: rgb(7, 192, 7);
@@ -195,12 +215,14 @@ table {
     border-collapse: collapse;
     margin: 20px 0;
     font-family: Arial, sans-serif;
+
 }
 
 table,
 th,
 td {
     border: 1px solid #ddd;
+    
 }
 
 th,
@@ -213,6 +235,10 @@ th {
     color: white;
     text-align: center;
     font-size: 22px;
+    border-radius: 10px;
+}
+td{
+    font-size: 18px;
 }
 
 tr:nth-child(even) {
@@ -233,13 +259,9 @@ tr:hover {
 }
 
 .botonComprar {
-    margin-left: auto;
-    display: block;
-    margin-right: 5%;
     font-size: 20px;
     padding: 20px;
 }
-
 
 
 #notification {

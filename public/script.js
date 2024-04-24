@@ -49,6 +49,6 @@ function showNotification(message) {
     setTimeout(() => {
         notification.style.display = 'none';
 
-    }, 1000);
+    }, 800);
 }
 
