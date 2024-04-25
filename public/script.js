@@ -35,20 +35,18 @@ fetch('../productos')
 
 let carrito = JSON.parse(localStorage.getItem('carrito')) || {};
 
-function agregarAlCarrito(id) {
+const agregarAlCarrito = (id) => {
     carrito[id] = (carrito[id] || 0) + 1;
     localStorage.setItem('carrito', JSON.stringify(carrito));
     showNotification('Producto agregado al carrito');
 }
 
-function showNotification(message) {
+const showNotification = (message) =>{
     const notification = document.getElementById('notification');
     notification.textContent = message;
     notification.style.display = 'block';
 
     setTimeout(() => {
         notification.style.display = 'none';
-
     }, 800);
 }
-

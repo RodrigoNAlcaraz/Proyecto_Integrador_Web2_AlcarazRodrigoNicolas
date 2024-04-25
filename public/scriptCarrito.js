@@ -46,7 +46,7 @@ fetch('../productos')
     .catch(error => console.error('Error obteniendo productos:', error));
 
 
-function precioTotal() {
+const precioTotal = () =>{
     let precioTotal = 0;
     for (let id in carrito) {
         if (id !== 'precioTotal') {
@@ -64,7 +64,7 @@ function precioTotal() {
     localStorage.setItem('carrito', JSON.stringify(carrito));
 }
 
-function disminuirCantidad(id) {
+const disminuirCantidad = (id) => {
     if (carrito[id] > 1) {
         carrito[id]--;
     } else {
@@ -75,14 +75,14 @@ function disminuirCantidad(id) {
     precioTotal();
 }
 
-function aumentarCantidad(id) {
+const aumentarCantidad = (id) =>{
     carrito[id] = (carrito[id] || 0) + 1;
     localStorage.setItem('carrito', JSON.stringify(carrito));
     location.reload();
     precioTotal();
 }
 
-function eliminarDelCarrito(id) {
+const eliminarDelCarrito = (id) => {
     delete carrito[id];
     localStorage.clear;
     localStorage.setItem('carrito', JSON.stringify(carrito));
@@ -91,7 +91,7 @@ function eliminarDelCarrito(id) {
 }
 
 
-function showNotification(message) {
+const showNotification = (message) => {
     const notification = document.getElementById('notification');
     notification.textContent = message;
     notification.style.display = 'block';
@@ -101,7 +101,7 @@ function showNotification(message) {
 }
 
 
-function comprar() {
+const comprar = () =>{
     fetch('/comprar', {
         method: 'POST',
         headers: {
