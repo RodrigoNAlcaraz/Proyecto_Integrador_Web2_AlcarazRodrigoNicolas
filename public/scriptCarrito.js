@@ -46,26 +46,23 @@ fetch('../productos')
     .catch(error => console.error('Error obteniendo productos:', error));
 
 
-    function precioTotal() {
-        let precioTotal = 0;
-        for (let id in carrito) {
-            if (id !== 'precioTotal') {
-                const producto = productos.find(producto => producto.id === Number(id));
-                if (producto) {
-                    const cantidad = carrito[id];
-                    const descuento = producto.descuento || 0;
-                    const precioConDescuento = producto.price * (1 - descuento / 100);
-                    const total = precioConDescuento * cantidad;
-                    precioTotal += total;
-                }
+function precioTotal() {
+    let precioTotal = 0;
+    for (let id in carrito) {
+        if (id !== 'precioTotal') {
+            const producto = productos.find(producto => producto.id === Number(id));
+            if (producto) {
+                const cantidad = carrito[id];
+                const descuento = producto.descuento || 0;
+                const precioConDescuento = producto.price * (1 - descuento / 100);
+                const total = precioConDescuento * cantidad;
+                precioTotal += total;
             }
         }
-        carrito.precioTotal = precioTotal.toFixed(2);
-        localStorage.setItem('carrito', JSON.stringify(carrito));
-       
-  
     }
-    
+    carrito.precioTotal = precioTotal.toFixed(2);
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+}
 
 function disminuirCantidad(id) {
     if (carrito[id] > 1) {
@@ -98,7 +95,6 @@ function showNotification(message) {
     const notification = document.getElementById('notification');
     notification.textContent = message;
     notification.style.display = 'block';
-
     setTimeout(() => {
         notification.style.display = 'none';
     }, 3000);
@@ -106,7 +102,6 @@ function showNotification(message) {
 
 
 function comprar() {
-
     fetch('/comprar', {
         method: 'POST',
         headers: {
@@ -123,7 +118,6 @@ function comprar() {
             setTimeout(() => {
                 location.reload();
             }, 3200);
-
 
         })
         .catch((error) => {

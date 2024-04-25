@@ -22,28 +22,29 @@ h1 {
 
 .botonYPrecio {
     display: flex;
-    justify-content: flex-end;;
+    justify-content: flex-end;
+    ;
     align-items: center;
     padding: 0 5%;
 }
 
 .precioFinalCompra {
-    border-radius: 0px 25px 0px 25px; 
+    border-radius: 0px 25px 0px 25px;
     background: linear-gradient(to right, #9b87d1, #6c5ce7);
     color: white;
     font-size: 20px;
     padding: 15px;
     margin-right: 3%;
-    text-align: center; 
-    line-height: 1.5; 
-    font-weight: bold; 
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1); 
+    text-align: center;
+    line-height: 1.5;
+    font-weight: bold;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
 }
 
 .precioFinalCompra:hover {
-    transform: scale(1.1); 
-    background: linear-gradient(to right,  #6c5ce7, #9b87d1);
-    border-radius: 25px 0px 25px 0px; 
+    transform: scale(1.1);
+    background: linear-gradient(to right, #6c5ce7, #9b87d1);
+    border-radius: 25px 0px 25px 0px;
     transition: all 0.5s ease;
 }
 
@@ -110,11 +111,11 @@ h1 {
     font-size: 14px;
     border: 1px solid #000000;
     border-radius: 10px;
-    background-color: #f8f9fa; 
+    background-color: #f8f9fa;
     padding: 9px;
     color: #333;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); 
-    transition: all 0.5s ease-in-out; 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    transition: all 0.5s ease-in-out;
 }
 
 input {
@@ -140,9 +141,9 @@ button {
 }
 
 button:hover {
-    background-color: #0e7ee7 ;
+    background-color: #0e7ee7;
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
-    transition: all 0.3s ease-in-out; 
+    transition: all 0.3s ease-in-out;
     transform: scale(1.05);
 }
 
@@ -158,20 +159,20 @@ nav {
 
 .navegable {
     margin: 10px 20px 10px 10px;
-    transition: all 0.3s ease-in-out; 
+    transition: all 0.3s ease-in-out;
 }
 
 .imagCarrito {
     height: 50px;
     border-radius: 50%;
-    transition: all 0.3s ease-in-out; 
+    transition: all 0.3s ease-in-out;
 }
 
 .navegable:hover {
     background-color: #0e7ee7;
-    border-radius: 15px; 
+    border-radius: 15px;
     transform: scale(1.25);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
 .precioFinal {
@@ -195,8 +196,8 @@ nav {
     font-weight: bold;
     visibility: hidden;
     border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); 
-    transition: all 0.3s ease-in-out; 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    transition: all 0.3s ease-in-out;
 }
 
 .card[data-descuento='true'] .offer-band {
@@ -222,7 +223,7 @@ table,
 th,
 td {
     border: 1px solid #ddd;
-    
+
 }
 
 th,
@@ -237,7 +238,8 @@ th {
     font-size: 22px;
     border-radius: 10px;
 }
-td{
+
+td {
     font-size: 18px;
 }
 
@@ -287,6 +289,5 @@ footer {
 }
 
 footer p {
-    margin: 0; 
+    margin: 0;
 }
-
